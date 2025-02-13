@@ -8,7 +8,8 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("This is the employee Page")
+    #return HttpResponse("This is the employee Page")
+    return render(request, 'home.html')
 def product(request):
     return HttpResponse("This is the product Page")
 

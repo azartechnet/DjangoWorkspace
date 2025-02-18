@@ -24,3 +24,5 @@ def simple_login(request):
             return render(request, 'employee/login.html', {'message': 'Invalid username or password'})
     return render(request, 'employee/login.html')
 
+def register_form(request):
+    return render(request, 'employee/register.html')

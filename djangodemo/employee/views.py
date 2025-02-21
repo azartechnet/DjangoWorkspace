@@ -6,6 +6,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from employee.models import Employee
+
 
 def home(request):
     #return HttpResponse("This is the home Page")
@@ -26,3 +28,8 @@ def simple_login(request):
 
 def register_form(request):
     return render(request, 'employee/register.html')
+
+def employee_list(request):
+    employees=Employee.objects.all()
+    return render(request, 'employee/employee_list.html',{"employees":employees})
+

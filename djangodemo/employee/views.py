@@ -31,5 +31,5 @@ def register_form(request):
 
 def employee_list(request):
     employees=Employee.objects.all()
-    return render(request, 'employee/employee_list.html',{"employees":employees})
+    return render(request, 'employee/employees.html',{"employees":employees})
 
